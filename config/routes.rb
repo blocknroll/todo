@@ -6,6 +6,9 @@ Todo::Application.routes.draw do
   end
 
 
+  match 'lists/:list_id/tasks/:id/complete' => 'tasks#complete', :as => :complete_task
+
+
   root :to => 'lists#index'
 
 
